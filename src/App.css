@@ -1,0 +1,98 @@
+/* Make the app span the whole page */
+.vl-app {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+header.vl-header {
+  background: #222;
+  color: #fff;
+  padding: 0.5rem 0;
+  text-align: center;
+  width: 100%;
+}
+header.vl-header nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+header.vl-header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+main.vl-main {
+  flex: 1 0 auto;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+.vl-progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.vl-progress-container progress {
+  width: 100%;
+  
+}
+
+section.vl-mission {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+section.vl-current-cause {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.vl-donate-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 0.75rem 1.5rem;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.vl-donate-btn:hover {
+  background: #005fa3;
+}
+
+section.vl-past-causes {
+  margin-bottom: 2rem;
+}
+section.vl-past-causes ul {
+  list-style: none;
+  padding: 0;
+}
+section.vl-past-causes li {
+  margin-bottom: 8px;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+section.vl-past-causes span {
+  color: #888;
+}
+
+/* Footer styles */
+footer.vl-footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
