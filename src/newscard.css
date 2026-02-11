@@ -1,0 +1,28 @@
+.link {
+  text-decoration: none;
+  display: block;
+}
+
+.typography {
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.card {
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px rgba(0, 188, 212, 0.3);
+  transform: translateY(-5px);
+}
+
+.card:hover .typography {
+  color: #00bcd4;
+}
+
+.card .MuiCardActionArea-root {
+  transition: none !important;
+}
