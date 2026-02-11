@@ -1,12 +1,14 @@
 nav {
-    padding: 1rem 0rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     display: flex ;
-    height: 5vh;
-    height: 5vh;
+    height: 7vh;
     background: #222;
-    
     overflow-x: scroll;
     overflow-y: hidden;
     z-index: 1;

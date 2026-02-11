@@ -15,13 +15,11 @@
 }
 
 .card:hover {
-  box-shadow: 0 10px 15px rgba(0, 188, 212, 0.3);
+  /* box-shadow: 0 10px 15px rgba(0, 188, 212, 0.3); */
   transform: translateY(-5px);
 }
 
-.card:hover .typography {
-  color: #00bcd4;
-}
+
 
 .card .MuiCardActionArea-root {
   transition: none !important;
