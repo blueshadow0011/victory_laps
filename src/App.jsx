@@ -24,6 +24,7 @@ export default function App(){
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/Newsletter' element={<Newsletter/>} />
+          <Route path='*' element={<Home/>} />
         </Routes>
     </ThemeProvider>
     </BrowserRouter>

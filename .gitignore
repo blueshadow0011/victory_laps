@@ -17,7 +17,7 @@ firebase.js
 .firebase\hosting.ZGlzdA.cache
 # Editor directories and files
 .firebase/
-.firebasesrc
+.firebaserc
 firebase.json
 eslint.config.js
 vite.config.js
