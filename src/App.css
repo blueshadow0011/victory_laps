@@ -5,10 +5,28 @@
   margin: 0;
   padding: 0;
   display: flex;
-  
+  align-items: center;
   flex-direction: column;
 }
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
 
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge (Chromium) */
+  width: 0;
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+  width: 0;
+}
 /* Header styles */
 header.vl-header {
   background: #222;
@@ -104,7 +122,11 @@ section.vl-past-causes span {
 
 /* Footer styles */
 footer.vl-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   
+  right: 0;
   background: #222;
   color: #fff;
   text-align: center;
@@ -116,9 +138,14 @@ footer.vl-footer {
 
 /* here is the css for the newsletter page */
 .newsletter {
+  justify-self: start;
+  flex: 1 0 auto;
+  position: sticky;
   width: 100vw;
-  height: 90vh;
-  margin: 0;
+  overflow: hidden;
+  height: 50vh;
+  margin-top: 7vh;
+  top:7vh;
   /* SCROLLBAR */
   ::-webkit-scrollbar {
     width: 0.15625vw;

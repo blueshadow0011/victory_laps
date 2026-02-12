@@ -18,6 +18,7 @@ export default function Newsletter() {
               threshold={0.1}
               delay={0}
           >
+        <div className='vl-app'>
         <div className='newsletter'>
             <div className='header'>
                 <h1>Victory Laps Newsletters</h1>
@@ -25,6 +26,7 @@ export default function Newsletter() {
             <div className='cards'>
                 <Cards image={''} title={'March 2026'} link={'/newsletter1'}/>
             </div>
+        </div>
         </div>
         </AnimatedContent>
     

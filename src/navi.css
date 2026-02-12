@@ -71,6 +71,7 @@ header.vl-header nav a:hover {
     font-family: Arial, sans-serif;
     font-size: large;
     z-index: 1;
+    transition: ease 0.3s all;
 }
 .nav-a {
     display: flex;
@@ -78,10 +79,12 @@ header.vl-header nav a:hover {
     align-items: center;
     justify-content: center;
     margin-right: 2rem;
+    
     z-index: 1;
 }
 .nav-a a:hover {
-    color: #00bcd4;
+    
+    transform: translateY(-0.5rem);
     padding: 1rem;
     border-radius: 2%;
     z-index: 1;
