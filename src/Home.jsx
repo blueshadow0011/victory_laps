@@ -4,6 +4,7 @@ import { doc, onSnapshot } from 'firebase/firestore'
 import { db } from './firebase.js'
 import './App.css'
 import Navi from './Header.jsx'
+import { LinearProgress } from '@mui/material'
 function Home() {
   const [currentCause, setCurrentCause] = useState({
     title: 'Loading cause...',
@@ -108,7 +109,23 @@ function Home() {
 
     return () => unsubscribes.forEach(unsub => unsub());
   }, []);
-
+  let desc = "out of";
+  let Progress1 = progressData?.progress || 0;
+  const Progress = progressData?.progress || 0;
+  const Total1 = progressData?.total || 100;
+  if (Progress1 > Total1) {
+      Progress1 =  Progress1-Total1;
+      desc = "over";
+    }
+  useEffect(() => {
+    const color = Progress > Total1 ? '#ff3700' : '#0064b4';
+    const color1 = Progress > Total1 ? '#0064b4' : '#ffff';
+    document.documentElement.style.setProperty('--progress-color', color);
+    document.documentElement.style.setProperty('--progress-background', color1);
+    
+  }, [Progress, Total1]);
+  
+  const progressPercentage = Math.min(Math.max((Progress1 / Total1) * 100, 0), 100);
   return (
     <div className="vl-app">
       
@@ -133,8 +150,9 @@ function Home() {
               <p>Loading progress...</p>
             ) : (
               <>
-                <progress value={progressData?.progress || 0} max={progressData?.total}></progress>
-                <h3>{progressData?.progress ?? 0}KM with goal {progressData?.total ?? 100}KM</h3>
+                {/* <progress value={Progress1} max={Total1} ></progress> */}
+                <LinearProgress variant="determinate" value={progressPercentage} color='primary' /> 
+                <h3>{Progress1 ?? 0}KM {desc} {progressData?.total ?? 100}KM</h3>
               </>
             )}
           </div>

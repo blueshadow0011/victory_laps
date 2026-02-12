@@ -41,6 +41,16 @@ main.vl-main {
   justify-content: center;
   gap: 1rem;
 }
+.vl-progress-container .MuiLinearProgress-root {
+  width: 80%;
+  height: 10px;
+}
+.vl-progress-container .MuiLinearProgress-colorPrimary {
+  background-color: var(--progress-background); 
+}
+.vl-progress-container .MuiLinearProgress-bar {
+  background-color: var(--progress-color); /* Filled part color */
+}
 .vl-progress-container progress {
   width: 100%;
   
