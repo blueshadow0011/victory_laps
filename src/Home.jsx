@@ -116,7 +116,7 @@ function Home() {
       desc = "over";
     }
   useEffect(() => {
-    const color = Progress > Total1 ? '#ff3700' : '#0064b4';
+    const color = Progress > Total1 ? '#9a2404' : '#0064b4';
     const color1 = Progress > Total1 ? '#0064b4' : '#ffff';
     document.documentElement.style.setProperty('--progress-color', color);
     document.documentElement.style.setProperty('--progress-background', color1);

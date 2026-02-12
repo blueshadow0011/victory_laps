@@ -12,7 +12,15 @@ dist
 dist-ssr
 *.local
 firebase.js
+.firebase
+
+.firebase\hosting.ZGlzdA.cache
 # Editor directories and files
+.firebase/
+.firebasesrc
+firebase.json
+eslint.config.js
+vite.config.js
 .vscode/*
 !.vscode/extensions.json
 .idea
