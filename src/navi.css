@@ -16,6 +16,7 @@ nav {
     display: none;
     width: 0; /* Optional: remove scrollbar space */
     height: 0; /* Optional: for horizontal scrollbar */
+    min-width: none;
   }
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -25,9 +26,13 @@ nav {
 .vl-header {
     margin-left: 2rem;
     font-family: Arial, sans-serif;
-    
+    flex-shrink: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-weight: bold;
     z-index: 1;
+    min-width: 0;
 }
 * Header styles */
 header.vl-header {
@@ -36,6 +41,17 @@ header.vl-header {
   padding: 0.5rem 0;
   text-align: center;
   width: 100%;
+  flex-shrink: 1;
+  min-width: none;
+}
+.vl-header h1{
+  flex-shrink: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: clamp(1rem, 5vw, 3rem);
 }
 header.vl-header nav a {
   color: #fff;

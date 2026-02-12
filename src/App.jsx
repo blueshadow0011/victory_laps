@@ -9,6 +9,10 @@ const theme = createTheme();
 export default function App(){
     return(
     <BrowserRouter>
+    
+
+
+
     <ThemeProvider theme={theme}>
     {/* this puts my navbar above everything else */}
     <Navi/>    

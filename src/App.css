@@ -33,6 +33,7 @@ main.vl-main {
   /* margin: 7vh 2rem 0; */
   padding: 0 1rem;
   box-sizing: border-box;
+  margin-top: 7vh;
 }
 .vl-progress-container {
   display: flex;
@@ -44,6 +45,7 @@ main.vl-main {
 .vl-progress-container .MuiLinearProgress-root {
   width: 80%;
   height: 10px;
+  border-radius: 20px;
 }
 .vl-progress-container .MuiLinearProgress-colorPrimary {
   background-color: var(--progress-background); 
@@ -102,6 +104,7 @@ section.vl-past-causes span {
 
 /* Footer styles */
 footer.vl-footer {
+  
   background: #222;
   color: #fff;
   text-align: center;
@@ -116,7 +119,26 @@ footer.vl-footer {
   width: 100vw;
   height: 90vh;
   margin: 0;
-  
+  /* SCROLLBAR */
+  ::-webkit-scrollbar {
+    width: 0.15625vw;
+    border-radius: 0.1041666667vw;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: none;
+    border-radius: 0.1041666667vw;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    background: none;
+    border-radius: 0.1041666667vw;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+    background: none;
+    border-radius: 0.1041666667vw;
+  }
   display: flex;
   flex-direction: column;
 }
@@ -127,5 +149,9 @@ footer.vl-footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 1;
 
+}
+.header h1 {
+  flex-shrink: 1;
 }

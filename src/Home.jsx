@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Route, Routes ,Link } from 'react-router-dom'
 import { doc, onSnapshot } from 'firebase/firestore'
 import { db } from './firebase.js'
 import './App.css'
-import Navi from './Header.jsx'
 import { LinearProgress } from '@mui/material'
+import AnimatedContent from './AnimatedContent.jsx'
 function Home() {
   const [currentCause, setCurrentCause] = useState({
     title: 'Loading cause...',
@@ -14,7 +13,6 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   const [progressData, setProgressData] = useState(null);
-  const [TotalData, setTotalData] = useState(null);
   const [progressLoading, setProgressLoading] = useState(true);
 
   const [pastCauses, setPastCauses] = useState([]);
@@ -130,6 +128,18 @@ function Home() {
     <div className="vl-app">
       
       <main className="vl-main">
+        <AnimatedContent
+              distance={100}
+              direction="vertical"
+              reverse={false}
+              duration={0.8}
+              ease="power3.out"
+              initialOpacity={0}
+              animateOpacity
+              scale={1}
+              threshold={0.1}
+              delay={0}
+          >
         <section className="vl-mission">
           <h2>Our Mission</h2>
           <p>
@@ -174,12 +184,13 @@ function Home() {
           )}
         </section>
 
-
+          </AnimatedContent>
       </main>
 
       <footer className="vl-footer">
         <small>&copy; {new Date().getFullYear()} Victory Laps Charity. All rights reserved.</small>
       </footer>
+      
     </div>
   )
 }
