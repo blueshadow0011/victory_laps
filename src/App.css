@@ -30,7 +30,7 @@ header.vl-header nav a:hover {
 main.vl-main {
   flex: 1 0 auto;
   width: 100%;
-  margin: 7vh 2rem 0;
+  /* margin: 7vh 2rem 0; */
   padding: 0 1rem;
   box-sizing: border-box;
 }

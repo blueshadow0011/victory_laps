@@ -13,6 +13,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   const [progressData, setProgressData] = useState(null);
+  const [TotalData, setTotalData] = useState(null);
   const [progressLoading, setProgressLoading] = useState(true);
 
   const [pastCauses, setPastCauses] = useState([]);
@@ -132,8 +133,8 @@ function Home() {
               <p>Loading progress...</p>
             ) : (
               <>
-                <progress value={progressData?.progress || 0} max={100}></progress>
-                <h3>{progressData?.progress ?? 0}KM with goal 100KM</h3>
+                <progress value={progressData?.progress || 0} max={progressData?.total}></progress>
+                <h3>{progressData?.progress ?? 0}KM with goal {progressData?.total ?? 100}KM</h3>
               </>
             )}
           </div>
@@ -146,7 +147,7 @@ function Home() {
             <p>Loading past causes...</p>
           ) : (
             <ul>
-              {[...pastCauses].reverse().map((cause, idx) => (
+              {[...pastCauses].map((cause, idx) => (
                 <li key={idx}>
                   <strong>{cause.Title}</strong> <span>({cause.Date})</span>
                 </li>
