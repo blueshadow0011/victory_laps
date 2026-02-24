@@ -7,24 +7,36 @@ import { Link } from 'react-router-dom';
 import './newscard.css'
 
 // the cards used to link around the website
-export default function Cards({ image, title, link }) {
+export default function Cards({ image, title, link })   {
+  const isExternal = Boolean(link && (link.startsWith('http') || link.endsWith('.pdf') || link.startsWith('/')))
+
+  const content = (
+    <CardActionArea>
+      <CardMedia
+        component="img"
+        height="250"
+        image={image ? image : "/VL-trans.png"}
+        alt={title}
+      />
+      <CardContent>
+        <Typography className="typography" gutterBottom variant="h5" component="div" style={{ fontFamily: 'Arial, sans-serif' }}>
+          {title}
+        </Typography>
+      </CardContent>
+    </CardActionArea>
+  )
+
   return (
     <Card sx={{ minWidth: 150,flexShrink: 1,maxWidth:345,flex:1,transition: 'all 0.3s ease' }} className='card'>
-      <Link className="link" to={link} >
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={image ? image : "/VictoryLogo.png"}
-          alt={title}
-        />
-        <CardContent>
-          <Typography className="typography" gutterBottom variant="h5" component="div" style={{ fontFamily: 'Arial, sans-serif' }}>
-        {title}
-          </Typography>
-        </CardContent>  
-      </CardActionArea>
-      </Link>
+      {isExternal ? (
+        <a className="link" href={link} target="_blank" rel="noopener noreferrer">
+          {content}
+        </a>
+      ) : (
+        <Link className="link" to={link}>
+          {content}
+        </Link>
+      )}
     </Card>
   );
 }

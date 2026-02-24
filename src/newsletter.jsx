@@ -1,6 +1,7 @@
 import './App.css'
 import Cards from './newscard.jsx'
 import AnimatedContent from './AnimatedContent.jsx'
+import pdfFile from './assets/Beige and Red Professional School Newsletter (1).pdf'
 export default function Newsletter() {
 
 
@@ -24,7 +25,7 @@ export default function Newsletter() {
                 <h1>Victory Laps Newsletters</h1>
             </div>
             <div className='cards'>
-                <Cards image={''} title={'March 2026'} link={'/newsletter1'}/>
+                <Cards image={''} title={'March 2026'} link={pdfFile} />
             </div>
         </div>
         </div>
