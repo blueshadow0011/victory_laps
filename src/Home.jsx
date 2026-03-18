@@ -169,7 +169,7 @@ function Home() {
         </section>
 
         {/* ✅ Past causes from Firestore */}
-        <section id="past-causes" className="vl-past-causes">
+        {/* <section id="past-causes" className="vl-past-causes"> HIDE THE PAST CAUSES FOR NOW
           <h2>Past Causes</h2>
           {pastLoading ? (
             <p>Loading past causes...</p>
@@ -182,13 +182,13 @@ function Home() {
               ))}
             </ul>
           )}
-        </section>
+        </section> */}
 
           </AnimatedContent>
       </main>
 
       <footer className="vl-footer">
-        <small>&copy; {new Date().getFullYear()} Victory Laps Charity. All rights reserved.</small>
+        <small> {new Date().getFullYear()} Victory Laps Charity. All rights reserved.</small>
       </footer>
       
     </div>

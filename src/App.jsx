@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Home from './Home.jsx'
 import Navi from './Header.jsx'
 import Newsletter from './newsletter.jsx'
+import Contact from './Contact.jsx';
 const theme = createTheme();
 
 export default function App(){
@@ -24,6 +25,7 @@ export default function App(){
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/Newsletter' element={<Newsletter/>} />
+          <Route path='/Contact' element={<Contact/>} />
           <Route path='*' element={<Home/>} />
           
 

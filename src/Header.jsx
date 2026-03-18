@@ -16,6 +16,7 @@ function Navi() {
         <div className='nav-a'>
         <Link to="/">Home</Link> 
         <Link to="/Newsletter">Newsletters</Link> 
+        <Link to="/Contact">Contact</Link> 
         </div>
       </nav>
     </>

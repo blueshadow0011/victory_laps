@@ -182,3 +182,33 @@ footer.vl-footer {
 .header h1 {
   flex-shrink: 1;
 }
+/* here is the css for the contact page */
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+  flex-direction: column;
+  height: 87vh;
+  margin: 0;
+  
+}
+form{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  margin: 0;
+  padding: 3rem;
+  min-width: 20vw;
+  border-radius: 20%;
+  
+}
+.Contact-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+}
